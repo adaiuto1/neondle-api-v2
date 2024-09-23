@@ -11,7 +11,7 @@ app.use(express_1.default.json());
 const PORT = 8000;
 const corsOption = {
     credentials: true,
-    origin: ["http://localhost:3000", "http://localhost:80"],
+    origin: ["*"],
 };
 app.use((0, cors_1.default)(corsOption));
 app.get("/", (req, res) => {
