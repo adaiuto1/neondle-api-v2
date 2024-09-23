@@ -4,12 +4,11 @@ import cors from "cors";
 const app = express();
 app.use(express.json());
 const PORT = 8000;
-const cors = require('cors');
 
 const corsOption = {
-    credentials: true,
-    origin: ['http://localhost:3000', 'http://localhost:80']
-}
+	credentials: true,
+	origin: ["http://localhost:3000", "http://localhost:80"],
+};
 
 app.use(cors(corsOption));
 app.get("/", (req, res) => {
