@@ -8,8 +8,12 @@ const levelRouter_1 = require("./routers/levelRouter");
 const cors_1 = __importDefault(require("cors"));
 const app = (0, express_1.default)();
 app.use(express_1.default.json());
-app.use((0, cors_1.default)());
 const PORT = 8000;
+const corsOption = {
+    credentials: true,
+    origin: ["http://localhost:3000", "http://localhost:80"],
+};
+app.use((0, cors_1.default)(corsOption));
 app.get("/", (req, res) => {
     res.send("Hello, World!");
 });
