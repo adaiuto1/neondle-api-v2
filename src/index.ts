@@ -7,7 +7,7 @@ const PORT = 8000;
 
 const corsOption = {
 	credentials: true,
-	origin: ["*", "*"],
+	origin: ["*"],
 };
 
 app.use(cors(corsOption));
